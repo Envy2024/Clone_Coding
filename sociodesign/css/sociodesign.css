@@ -1,6 +1,6 @@
 :root { font-size: 16px; }
 body { 
-  min-height: 1280px;
+  min-width: 1024px;
   font-family: 'Nanum Myeongjo', serif;
   font-weight: 300;
   font-size: 16px;
@@ -8,7 +8,16 @@ body {
 }
 
 /* Header */
-header { display: block; position: fixed; width: 100%; height: 95px; }
+header {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 95px;
+  background: #ffffff;
+  z-index: 9999;
+}
 header h1 { position: absolute; left: 50px; top: 36px; }
 header h1 a { 
   display: block;
@@ -34,5 +43,125 @@ header .sub-nav li a:hover:after { background: #000000; }
 header nav li { display: inline-block; }
 header nav li a { color: #bbbbbb; }
 header nav li a:hover { color: #000000; }
-
 /* Header End */
+/* Main */
+main, .sns {
+  padding: 25px 44px 0px;
+  background-color: #f8f8f8;
+}
+main { margin-top: 95px; padding-bottom: 95px; }
+/* Main End */
+/* Visual */
+.visual { position: relative; height: 730px;}
+.visual .control ul { position: absolute; bottom: 0px; padding-bottom: 15px; }
+.visual .control ul li { 
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.visual .control ul .on { background: #000; }
+.visual .control ul li a { color: transparent; }
+.visual .slide { position: absolute; left: 0; top: 0; width: 100%; height: 670px; overflow: hidden; }
+.visual .slide a { 
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url('../image/res/Hero_Knnox.jpg') no-repeat center;
+  background-size: cover; 
+  color: transparent;
+}
+/* Visual End */
+/* Product */
+.product { 
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; 
+  height: 730px; 
+}
+.product .product-item { 
+  flex-grow: 1;
+  width: calc(50% - 6px);
+  height: calc(50% - 12px);
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: gray;
+}
+.product .product-item:last-child {
+  height: 100%;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.product .product-item a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.product .product-item a img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;height: 100%;
+}
+.product .product-item a:hover div {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.product .product-item a div p { color: transparent; }
+.product .product-item a:hover div p { 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: white; 
+}
+.product .product-item a:hover div p:after { 
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  background: #bbbbbb;
+}
+/* Product End */
+/* Sns */
+.sns ul { height: 120px; }
+.sns li:first-child { float: left; width: 50%; height: 100%; }
+.sns li:nth-child(2) { margin-bottom: 20px; }
+.sns li:nth-child(2),
+.sns li:nth-child(3) { float: right; width: 50%; }
+.sns li:last-child:before { 
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background: url('../image/res/clock.png') no-repeat;
+}
+.sns li:last-child:after { content: ""; clear: both; }
+/* Sns End */
+/* Footer */
+footer { padding: 0 44px 60px; background-color: #f8f8f8; }
+footer ul { padding: 35px 0 60px; border-top: 1px solid #dedee1; }
+footer ul li { float: left; width: 25%; height: 100%; font-size: 16px; }
+footer ul .sns-link { display: flex; flex-wrap: wrap; justify-content: flex-end; height: 36px; }
+footer ul .sns-link a { display: block; width: 12%; font-size: 0; }
+footer ul .sns-link a:nth-child(1) { background: url('../image/res/Twitter-icon.png') no-repeat center; }
+footer ul .sns-link a:nth-child(2) { background: url('../image/res/LinkedIn-icon.png') no-repeat center; }
+footer ul .sns-link a:nth-child(3) { background: url('../image/res/Instagram-icon.png') no-repeat center; }
+footer ul .sns-link a:nth-child(1):hover { background: url('../image/res/Twitter-icon-hover.png') no-repeat center; } 
+footer ul .sns-link a:nth-child(2):hover { background: url('../image/res/LinkedIn-icon-hover.png') no-repeat center; }
+footer ul .sns-link a:nth-child(3):hover { background: url('../image/res/Instagram-icon-hover.png') no-repeat center; }
+footer ul .sns-link:after { content: ""; float: both; }
+/* Footer end */
