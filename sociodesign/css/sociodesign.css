@@ -53,24 +53,37 @@ main { margin-top: 95px; padding-bottom: 95px; }
 /* Main End */
 /* Visual */
 .visual { position: relative; height: 730px;}
-.visual .control ul { position: absolute; bottom: 0px; padding-bottom: 15px; }
-.visual .control ul li { 
-  display: inline-block;
+.visual .control ul { position: absolute; bottom: 30px; }
+.visual .control ul li { display: inline-block; }
+.visual .control ul li a { 
+  display: block;
   width: 8px;
   height: 8px;
-  border: 1px solid black;
-  border-radius: 5px;
+  font-size: 0px;
+  border: 1px solid black; 
+  border-radius: 8px; 
+  color: transparent; 
 }
-.visual .control ul .on { background: #000; }
-.visual .control ul li a { color: transparent; }
+.visual .control ul li .on { background: #000; }
 .visual .slide { position: absolute; left: 0; top: 0; width: 100%; height: 670px; overflow: hidden; }
 .visual .slide a { 
   display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: url('../image/res/Hero_Knnox.jpg') no-repeat center;
-  background-size: cover; 
   color: transparent;
+  opacity: 0;
+  transition: 1.1s;
+}
+.visual .slide a:nth-child(1) { background: url('../image/res/Hero_Knnox.jpg') no-repeat center; background-size: cover; } 
+.visual .slide a:nth-child(2) { background: url('../image/res/Hero_Capital_2.jpg') no-repeat center; background-size: cover; } 
+.visual .slide a:nth-child(3) { background: url('../image/res/Hero_Chaos.jpg') no-repeat center; background-size: cover; } 
+.visual .slide a:nth-child(4) { background: url('../image/res/Hero_BC.jpg') no-repeat center; background-size: cover; } 
+.visual .slide a:nth-child(5) { background: url('../image/res/Hedeker_Small_Panel-1200x675.jpg') no-repeat center; background-size: cover; } 
+.visual .slide .active { 
+  opacity: 1; 
 }
 /* Visual End */
 /* Product */
@@ -165,3 +178,14 @@ footer ul .sns-link a:nth-child(2):hover { background: url('../image/res/LinkedI
 footer ul .sns-link a:nth-child(3):hover { background: url('../image/res/Instagram-icon-hover.png') no-repeat center; }
 footer ul .sns-link:after { content: ""; float: both; }
 /* Footer end */
+
+
+/* animation */
+/* @keyframes slideOpacity {
+  0% {opacity: 0;}
+  10% {opacity: 0.1;}
+  25% {opacity: 0.25;}
+  50% {opacity: 0.5;}
+  75% {opacity: 0.75;}
+  100% {opacity: 1;}
+} */
